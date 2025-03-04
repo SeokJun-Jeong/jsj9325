@@ -1,12 +1,14 @@
-TARGET = infinit limit celsius.c
+TARGET = infinit limit celsius charnumber
+
 
 all : ${TARGET}
 
 
 infinit : $@
 limit : $@
-celsius.c : $@
-free.c : $@
+free : $@
+celsius : $@
+charnumber : $@
 
 clean :
 	rm ${TARGET}

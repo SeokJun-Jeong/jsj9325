@@ -7,7 +7,7 @@ int main()
     
     fahr = 200;
     celsius = 5.0/9.0 * (fahr - 32);
-    printf("celsius tmp %d \n",celsius );
+    printf("celsius tmp %f\n",celsius );
 
     return 0;
     
