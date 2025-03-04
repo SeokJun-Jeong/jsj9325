@@ -1,4 +1,4 @@
-TARGET = infinit limit celsius charnumber
+TARGET = infinit limit celsius charnumber test ddd
 
 
 all : ${TARGET}
@@ -9,6 +9,9 @@ limit : $@
 free : $@
 celsius : $@
 charnumber : $@
+test : $@
+ddd: $@
+
 
 clean :
 	rm ${TARGET}
