@@ -1,17 +1,21 @@
-TARGET = infinit limit celsius charnumber test ddd
+TARGET = infinit celsius charnumber test ddd triangle triangle2 arithmetics increase literal
 
 
 all : ${TARGET}
 
 
 infinit : $@
-limit : $@
+
 free : $@
 celsius : $@
 charnumber : $@
 test : $@
 ddd: $@
-
+triangle : $@
+riangle2 :$@
+arithmetics : $@
+increase : $@
+literal :$@
 
 clean :
 	rm ${TARGET}
