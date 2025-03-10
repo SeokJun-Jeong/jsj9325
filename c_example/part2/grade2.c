@@ -12,7 +12,8 @@ int main(int argc, char*argv[])
     
     
      printf("인자를 하나 넣어서 실행세요.\n");
-       return 0;} //<-값을 넣치 않았을 때 문구 뜨게 하기
+       return 0;
+    } //<-값을 넣치 않았을 때 문구 뜨게 하기
 
     score = atoi(argv[1]);
 

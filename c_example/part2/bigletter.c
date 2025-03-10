@@ -4,7 +4,7 @@
 
 int main()
 {
-    char letter;
+    char *letter;
     printf("문자를 입력하시오 : ");
     scanf("%s",&letter);
 
@@ -17,10 +17,7 @@ int main()
         printf("소문자\n");
     }
     
-    // char letter;
-    // printf("문자를 입력하시오 : ");
-    // scanf("%s",&letter);
-
+ 
     // if ('A' <= letter && letter <= 'Z')
     // {
     //     printf("%s는 대문자\n",letter);

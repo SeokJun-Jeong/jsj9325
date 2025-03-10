@@ -8,7 +8,7 @@ int main(int argc, char*argv[])
     {
     
     
-    printf("인자를 하나 넣어서 실행세요./n");
+    printf("인자를 하나 넣어서 실행세요.\n");
         return 0 ;
     }
     // printf("%s\n",argv[1]);
