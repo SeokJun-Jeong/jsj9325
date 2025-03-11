@@ -3,6 +3,8 @@
         "stdio.h": "c",
         "limits.h": "c",
         "stdlib.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "serial.h": "c",
+        "myrandom.h": "c"
     }
 }
