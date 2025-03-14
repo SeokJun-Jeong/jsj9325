@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/random.dir/random.c.o -o random 

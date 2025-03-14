@@ -9,3 +9,10 @@ foreach(EXECUTABLE ${EXECUTABLES})
     get_filename_component(EXE_NAME ${EXECUTABLE} NAME_WE)
     add_executable(${EXE_NAME} ${EXECUTABLE})
 endforeach()
+
+
+# 하위 디렉토리 추가
+# add_subdirectory(CarSerial)
+# add_subdirectory(date)
+# add_subdirectory(myRandom)
+# add_subdirectory(string)

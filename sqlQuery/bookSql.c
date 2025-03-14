@@ -54,7 +54,7 @@ int main(void)
     }
     while (true)
     {
-      printf("1,2번 고르세요");
+    //   printf("1,2번 고르세요");
       print_menu();
       scanf("%d%*c",&choice);
       switch (choice)
@@ -130,6 +130,9 @@ void add_books(MYSQL *conn)
     }
 
     return;
+    int temp;
+    getchar();
+    scanf("%d%*c", &temp);
 }
 
 void delete_books(MYSQL *conn)
@@ -152,6 +155,9 @@ void delete_books(MYSQL *conn)
         my_ulonglong affected_row = mysql_affected_rows(conn);
         printf("삭제 성공 : %lu개",affected_row);
     }
+    int temp;
+    getchar();
+    scanf("%d%*c", &temp);
 }
 
 void update_books(MYSQL *conn)
@@ -171,8 +177,20 @@ void update_books(MYSQL *conn)
     scanf("%d%*c", &upbook.price);
     
     sprintf(query,"update Book set bookname = '%s', publisher = '%s', price = %d where bookid = %d",upbook.bookname,upbook.publisher, upbook.price,upbook.bookid);
-
+    if (mysql_query(conn,query))
+    {
+        printf("데이터 변경 실패: %s\n",mysql_error(conn));
+    }
+    else
+    {
+        printf("변경성공 \n");
+    }
+    int temp;
+    getchar();
+    scanf("%d%*c",&temp);
 }
+
+
 
 void query_books(MYSQL *conn)
 {
@@ -184,8 +202,8 @@ void query_books(MYSQL *conn)
     char query[255];
     printf("실행할 쿼리를 넣어 주세요. ");
     fgets(query,sizeof(query),stdin);
-    query[strspn(query, "\n")] = 0;
-    // scanf("%s",query);
+    query[strcspn(query, "\n")] = 0;
+    printf("쿼리 : %s\n",query);
     if (mysql_query(conn,query))
     {
         printf("쿼리 실패 %s\n", mysql_error(conn));
@@ -210,6 +228,9 @@ void query_books(MYSQL *conn)
         printf("요청한 데이터가 없습니다.\n");
     }
     waitEnter();
+    int temp;
+    getchar();
+    scanf("%d%*c", &temp);
 }
 
 void fetch_books(MYSQL *conn)

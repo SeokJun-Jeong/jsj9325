@@ -7,5 +7,5 @@ main.c
 serial.c)
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
-add_executable(carSerial ${SOURCES})
+add_executable(myRandom ${SOURCES})
 

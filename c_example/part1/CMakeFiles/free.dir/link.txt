@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/free.dir/free.c.o -o free 

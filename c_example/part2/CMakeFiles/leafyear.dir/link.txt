@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/leafyear.dir/leafyear.c.o -o leafyear 

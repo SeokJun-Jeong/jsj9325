@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/fileDescripor.dir/fileDescripor.c.o -o fileDescripor 

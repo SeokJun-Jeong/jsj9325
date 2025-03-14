@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/enumExaple.dir/enumExaple.c.o -o enumExaple 

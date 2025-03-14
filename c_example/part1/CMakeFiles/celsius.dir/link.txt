@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/celsius.dir/celsius.c.o -o celsius 

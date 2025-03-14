@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/PosZeroNeg.dir/PosZeroNeg.c.o -o PosZeroNeg 

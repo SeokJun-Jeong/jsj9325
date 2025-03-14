@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/seokjun/kubig2025
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/seokjun/kubig2025/sqlQuery
+CMAKE_BINARY_DIR = /home/seokjun/kubig2025
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seokjun/kubig2025/sqlQuery/CMakeFiles /home/seokjun/kubig2025/sqlQuery//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seokjun/kubig2025/sqlQuery/CMakeFiles 0
+	cd /home/seokjun/kubig2025 && $(CMAKE_COMMAND) -E cmake_progress_start /home/seokjun/kubig2025/CMakeFiles /home/seokjun/kubig2025/sqlQuery//CMakeFiles/progress.marks
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlQuery/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seokjun/kubig2025/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlQuery/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,30 +103,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlQuery/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlQuery/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/seokjun/kubig2025 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named bookSql
+# Convenience name for target.
+sqlQuery/CMakeFiles/bookSql.dir/rule:
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlQuery/CMakeFiles/bookSql.dir/rule
+.PHONY : sqlQuery/CMakeFiles/bookSql.dir/rule
 
-# Build rule for target.
-bookSql: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bookSql
+# Convenience name for target.
+bookSql: sqlQuery/CMakeFiles/bookSql.dir/rule
 .PHONY : bookSql
 
 # fast build rule for target.
 bookSql/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bookSql.dir/build.make CMakeFiles/bookSql.dir/build
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f sqlQuery/CMakeFiles/bookSql.dir/build.make sqlQuery/CMakeFiles/bookSql.dir/build
 .PHONY : bookSql/fast
 
 bookSql.o: bookSql.c.o
@@ -134,7 +135,7 @@ bookSql.o: bookSql.c.o
 
 # target to build an object file
 bookSql.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bookSql.dir/build.make CMakeFiles/bookSql.dir/bookSql.c.o
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f sqlQuery/CMakeFiles/bookSql.dir/build.make sqlQuery/CMakeFiles/bookSql.dir/bookSql.c.o
 .PHONY : bookSql.c.o
 
 bookSql.i: bookSql.c.i
@@ -142,7 +143,7 @@ bookSql.i: bookSql.c.i
 
 # target to preprocess a source file
 bookSql.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bookSql.dir/build.make CMakeFiles/bookSql.dir/bookSql.c.i
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f sqlQuery/CMakeFiles/bookSql.dir/build.make sqlQuery/CMakeFiles/bookSql.dir/bookSql.c.i
 .PHONY : bookSql.c.i
 
 bookSql.s: bookSql.c.s
@@ -150,7 +151,7 @@ bookSql.s: bookSql.c.s
 
 # target to generate assembly for a file
 bookSql.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bookSql.dir/build.make CMakeFiles/bookSql.dir/bookSql.c.s
+	cd /home/seokjun/kubig2025 && $(MAKE) $(MAKESILENT) -f sqlQuery/CMakeFiles/bookSql.dir/build.make sqlQuery/CMakeFiles/bookSql.dir/bookSql.c.s
 .PHONY : bookSql.c.s
 
 # Help Target
@@ -176,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/seokjun/kubig2025 && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

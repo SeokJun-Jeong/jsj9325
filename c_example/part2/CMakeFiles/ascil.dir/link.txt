@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/ascil.dir/ascil.c.o -o ascil 

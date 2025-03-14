@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/gender.dir/gender.c.o -o gender 

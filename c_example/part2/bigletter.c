@@ -6,7 +6,7 @@ int main()
 {
     char *letter;
     printf("문자를 입력하시오 : ");
-    scanf("%s",&letter);
+    scanf("%s", letter);
 
     if ((int)letter < 91)
     {
