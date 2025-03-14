@@ -420,5 +420,115 @@ select host, user from user;
 localhost > myuser > 0000 > > ; 
 
 
+복습
+외부라이브러리(Mysqlclient) 
+- 검색 API문서 
+-컴퓨터에 .h(해더파일)/.o(오브젝트파일)/기타 데이터가 있어야한다
+apt install Cdebian{컴퓨터 > .h(해더파일)/.o(오브젝트파일)/기타 데이터}
+MYSQLserver + libsqlclient > C programming /C++
+Cmake: makefile을 생성하는 도구 + 부가기능:[디버깅][debian 배포][install] 
 
 
+
+오전 9:03 2025-03-13
+
+동적 할당 
+- 런타임 
+- 프로그램 동작 중간 > 자유롭게(힙공간)
+
+정적 할당(메모리에 저장 장소 확보) 
+-프로그램 시작 순간
+-컴파일 타임 (코드)
+
+c언어함수: realloc: 주로쓰는 함수
+	       calloc:	 메모리를 0으로 초기화 후 할당
+
+※반드시 free를 해라
+
+
+booksql void add delete update query fetch
+
+
+
+오전 9:02 2025-03-14
+cmake설정- 관리기능(include(~) > sub.directory
+
+동적할당( charadress)
+
+기타문법 (공용체 union), (열거형enum)
+
+booksql
+
+
+
+
+
+
+stdin = fgetc = getchar = getc = 문자를 아스키코드로 출력
+stdout = fputc = putchar  = putc = 아스키코드를 다시 문자로 출력
+ 
+fflush <- 출력한 되었던 것을 저장하고 밑의 내용을 즉시 출력
+ex)sleep함수를 걸고 그 다음함수를 바로 출력하고 싶을 때
+우연히 바로 꺼졌을때 fflush함수까지는 저장이 되어 있다.
+
+
+
+
+
+
+
+
+
+
+
+볼링프로그램 만들기
+->입력함수 프레임(frame)    
+10프레임까지
+각 프레임마다 300점까지 계산
+-볼링룰로 만들기
+
+2. 
+1번테이블 (사용자명,점수,날짜) > score table
+ 
+2번테이블 (사용자명, 월별 사용자 수,월별 사용 횟수) > date table
+
+3. 1인용으로 가능하면 2인용 
+
+
+
+
+bowling 예시
+
+
+#include <stdio.h> 
+
+int main() {
+    int frames[10][2]; // 각 프레임의 투구 결과를 저장하는 배열
+    int scores[10] = {0}; // 각 프레임의 점수를 저장하는 배열
+    int totalScore = 0; // 최종 점수
+
+    // 투구 결과 입력 (예시)
+    frames[0][0] = 7; frames[0][1] = 2;
+    frames[1][0] = 10; frames[1][1] = 0; // 스트라이크
+    frames[2][0] = 5; frames[2][1] = 3;
+    frames[3][0] = 9; frames[3][1] = 1; // 스페어
+    frames[4][0] = 8; frames[4][1] = 1;
+    // ... 나머지 프레임 입력 ...
+
+    // 점수 계산
+    for (int i = 0; i < 10; i++) {
+        if (frames[i][0] == 10) { // 스트라이크
+            scores[i] = 10 + frames[i + 1][0] + frames[i + 2][0];
+        } else if (frames[i][0] + frames[i][1] == 10) { // 스페어
+            scores[i] = 10 + frames[i + 1][0];
+        } else { // 오픈 프레임
+            scores[i] = frames[i][0] + frames[i][1];
+        }
+        totalScore += scores[i];
+    }
+
+    // 결과 출력
+    printf("최종 점수: %d\n", totalScore);
+
+    return 0;
+}
