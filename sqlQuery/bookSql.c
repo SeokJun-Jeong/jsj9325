@@ -12,6 +12,7 @@ typedef struct
     char publisher[40];
     int price;
 } Book;
+
 enum menu
 {
     SELECT, 
@@ -21,13 +22,13 @@ enum menu
     QUERY
 };
 
-
 void fetch_books(MYSQL *conn);
 void add_books(MYSQL *conn);
-void delet_books(MYSQL *conn);
+void delete_books(MYSQL *conn);
 void update_books(MYSQL *conn);
 void query_books(MYSQL *conn);
 void print_menu(void);
+void waitEnter(void);
 
 int main(void)
 {
@@ -55,7 +56,7 @@ int main(void)
     {
       printf("1,2번 고르세요");
       print_menu();
-      scanf("%d",&choice);
+      scanf("%d%*c",&choice);
       switch (choice)
       {
         case SELECT:
@@ -109,13 +110,13 @@ void add_books(MYSQL *conn)
     char query[255];
     // 정보 입력 scanf
     printf("도서 ID: ");
-    scanf("%d", &newbook.bookid);
+    scanf("%d%*c", &newbook.bookid);
     printf("도서 명: ");
-    scanf("%s", newbook.bookname);
+    scanf("%s%*c", newbook.bookname);
     printf("출판사: ");
-    scanf("%s", newbook.publisher);
+    scanf("%s%*c", newbook.publisher);
     printf("가격: ");
-    scanf("%d", &newbook.price);
+    scanf("%d%*c", &newbook.price);
     // query 문 작성 strcpy... "insert ....."
     sprintf(query, "insert into Book values (%d, '%s', '%s', %d)", newbook.bookid, newbook.bookname, newbook.publisher, newbook.price);
     // query 요청 mysql_query();
@@ -130,13 +131,14 @@ void add_books(MYSQL *conn)
 
     return;
 }
+
 void delete_books(MYSQL *conn)
 {
     // index 번호 받기scanf
     // 지우는 쿼리
     int bookid;
     printf("삭제할 도서명 : ");
-    scanf("%d", &bookid);
+    scanf("%d%*c", &bookid);
     char query[255];
     sprintf(query,"delete from Book where bookid = %d",bookid);
 
@@ -151,6 +153,7 @@ void delete_books(MYSQL *conn)
         printf("삭제 성공 : %lu개",affected_row);
     }
 }
+
 void update_books(MYSQL *conn)
 {
     // 모든 번호 받기scanf
@@ -159,17 +162,18 @@ void update_books(MYSQL *conn)
     Book upbook;
     char query[255];
     printf("변경도서 ID:");
-    scanf("%d", &upbook.bookid);
+    scanf("%d%*c", &upbook.bookid);
     printf("변경도서명:");
-    scanf("%s", upbook.bookname);
+    scanf("%s%*c", upbook.bookname);
     printf("변경출판사:");
-    scanf("%s", upbook.publisher);
+    scanf("%s%*c", upbook.publisher);
     printf("변경도서가격:");
-    scanf("%d", &upbook.price);
+    scanf("%d%*c", &upbook.price);
     
     sprintf(query,"update Book set bookname = '%s', publisher = '%s', price = %d where bookid = %d",upbook.bookname,upbook.publisher, upbook.price,upbook.bookid);
 
 }
+
 void query_books(MYSQL *conn)
 {
     // 쿼리 스트링을 받아서
@@ -179,15 +183,13 @@ void query_books(MYSQL *conn)
     MYSQL_ROW row;
     char query[255];
     printf("실행할 쿼리를 넣어 주세요. ");
-    getchar();
     fgets(query,sizeof(query),stdin);
     query[strspn(query, "\n")] = 0;
     // scanf("%s",query);
     if (mysql_query(conn,query))
     {
         printf("쿼리 실패 %s\n", mysql_error(conn));
-        getchar();
-        return 0;
+        return ;
     }
     
     res = mysql_store_result(conn);
@@ -195,7 +197,7 @@ void query_books(MYSQL *conn)
     {
         while (row = mysql_fetch_row(res))
         {
-            for (int i = 0; i < mysql_num_fields; ++i)
+            for (int i = 0; i < mysql_num_fields(res); ++i)
             {
                 printf("%s\t", row[i]);
             }
@@ -207,9 +209,7 @@ void query_books(MYSQL *conn)
     {
         printf("요청한 데이터가 없습니다.\n");
     }
-    char temp;
-    getchar();
-    return;
+    waitEnter();
 }
 
 void fetch_books(MYSQL *conn)
@@ -239,7 +239,6 @@ void fetch_books(MYSQL *conn)
 //   }
   Book *pBook;
   pBook = (Book *)malloc(sizeof(Book));
-  Book book[100]; // 동적 할당이 좋다
   int i= 0;
   //데이터 베이스의 정보를 구조체에 저장
   while(row = mysql_fetch_row(res))
@@ -258,7 +257,7 @@ void fetch_books(MYSQL *conn)
   
   for (int j = 0; j < i; ++j)
   {
-      printf("%d \t%s \t%s \t%d\n",
+      printf("%d \t%s \t%s \t%d \n",
         (pBook+j)->bookid, 
         (pBook+j)->bookname,
         (pBook+j)->publisher,
@@ -267,5 +266,14 @@ void fetch_books(MYSQL *conn)
   free(pBook);
   // TODO :여기 엔터만 쳐도 넘어가게변경
   int temp;
-  scanf("%d", &temp);
+  getchar();
+  scanf("%d%*c", &temp);
+}
+
+void waitEnter(void)
+{
+    printf("엔터를 쳐 주세요\n");
+    char temp;
+    while (temp !='\n')
+    scanf("%c%*c",&temp);
 }

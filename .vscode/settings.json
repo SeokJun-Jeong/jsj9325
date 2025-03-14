@@ -8,6 +8,5 @@
         "myrandom.h": "c",
         "string.h": "c"
     },
-    "rod.distro": "humble",
     "cmake.sourceDirectory": "/home/seokjun/kubig2025"
 }

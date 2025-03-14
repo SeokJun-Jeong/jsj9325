@@ -27,9 +27,12 @@ project(part1)
 # c_example/part1/triangle.c  
 # c_example/part1/triangle2.c
 # )
+
+
+# 모든 .c 파일 자동 감지
 file(GLOB EXECUTABLES "${CMAKE_CURRENT_LIST_DIR}/*.c")
 
 foreach(EXECUTABLE ${EXECUTABLES})
-    get_filename_component(EXE_NAME ${EXECUTABLES} NAME_WE)
-    add_executable(${EXE_NAME} ${EXECUTABLES})
+    get_filename_component(EXE_NAME ${EXECUTABLE} NAME_WE)
+    add_executable(${EXE_NAME} ${EXECUTABLE})
 endforeach()
