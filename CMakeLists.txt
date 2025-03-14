@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.00)
+project(MainProject)
+
+#내부 CMakeLists.txt포함
+# include(sqlQuery/CMakeLists.txt)
+# include(c_example/part1/CMakeFilelists.c)
+
+add_subdirectory(sqlQuery)
+add_subdirectory(c_example/part1)
+add_subdirectory(c_example/part2)
+add_subdirectory(c_example/part3)

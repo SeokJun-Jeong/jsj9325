@@ -1,0 +1,3 @@
+/home/seokjun/kubig2025/sqlQuery/CMakeFiles/bookSql.dir
+/home/seokjun/kubig2025/sqlQuery/CMakeFiles/edit_cache.dir
+/home/seokjun/kubig2025/sqlQuery/CMakeFiles/rebuild_cache.dir
