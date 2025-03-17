@@ -22,3 +22,5 @@ VALUES(10, 'Olympic Champions', 'Pearson', 13000);
 
 use mydb;
 select * from Book;
+
+

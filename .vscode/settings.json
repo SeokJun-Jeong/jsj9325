@@ -8,5 +8,6 @@
         "myrandom.h": "c",
         "string.h": "c"
     },
-    "cmake.sourceDirectory": "/home/seokjun/kubig2025"
+    "cmake.sourceDirectory": "/home/seokjun/kubig2025",
+    "C_Cpp.errorSquiggles": "disabled"
 }
