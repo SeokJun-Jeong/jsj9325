@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <time.h>
 
 #define MAX_USERS 100  // 사용자 최대 수
 #define MAX_NAME_LEN 50 // 사용자명 최대 길이
@@ -170,13 +169,8 @@ int main() {
     // 사용자명과 월 입력 받기
     printf("사용자명을 입력하세요: ");
     scanf("%s", userName);
-    
-    time_t t =t;
-    time(&t);
-    struct  tm *localtime = localtime(&t);
-   
-    printf("현재 날짜 %d-%d"localtime->tm_mon,localtime->tm_mday);
-    
+    printf("게임을 진행한 월을 입력하세요 (1-12): ");
+    scanf("%d", &month);
 
     // 월별 사용자 사용 횟수 갱신
     updateUsageCount(userName, month);
@@ -187,6 +181,9 @@ int main() {
         printf("1. 볼링 점수 계산\n");
         printf("2. 월별 사용자 사용 횟수 출력\n");
         printf("3. 종료\n");
+   
+        printf("월별이 되지 않습니다 교수님죄송합니다\n");
+        printf("아두이노부터 열심히 잘 따라가겠습니다\n");
         printf("선택: ");
         scanf("%d", &choice);
 
