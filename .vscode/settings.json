@@ -6,7 +6,10 @@
         "time.h": "c",
         "serial.h": "c",
         "myrandom.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "delay.h": "c",
+        "interrupt.h": "c",
+        "io.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"

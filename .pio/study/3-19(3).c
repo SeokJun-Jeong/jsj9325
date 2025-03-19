@@ -1,3 +1,4 @@
+//millisecond
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
@@ -53,7 +54,7 @@ int main()
                 buttonState =reading;
 
                 //버튼이 눌렸을 때 동작 수행
-                if (buttonState = 0)
+                if (buttonState == 0)
                 {
                     PORTC ^= _BV(PC0);
                 }

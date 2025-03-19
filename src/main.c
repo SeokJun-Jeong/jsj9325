@@ -1,69 +1,59 @@
+//인터럽트로 FND를 점멸
+//INT5  phase 1 > phase 2 or phase 2 > phase 1
+//phase 1: FND가 빠르게 상승하는 코드 delay 100
+//phase 2: FND를 순간 멈추게 함
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
-volatile unsigned long milliseconds =0;
+volatile uint8_t timeStop = 0; 
+volatile char txData = 0;
 
-// void calcmilli(void);
-// {
-//     //계산하는코드
-//     ++milliseconds;
-// }
-
-ISR(TIMER0_OVF_vect)
+uint8_t getch(void)
 {
-    ++milliseconds;
-}
-
-//timer0활성화
-void timer0_init(void)
-{
-    TCCR0 = _BV(CS01) | _BV(CS00);
-    TCNT0 = 6;
-    TIMSK |= _BV(TOIE0);
-    sei();
+    uint8_t data;
+    while ((UCSR0A & 0x80) == 0) // 문자버퍼에 있으면 루프 탈출
+        ;
+     data = UDR0;
+    UCSR0A |= 0x80;
+    return data;
+    
 }
 
 int main()
 {
-    timer0_init();
-    DDRC = 0x01; // C 0비트 출력 설정
-    PORTE = 0xFF; // 풀업 설정
-
-    unsigned long lastDebounceTime =0;
-    const unsigned long debounceDelay = 20;
-    uint8_t lastButtonState = 1;
-    //unsigned char lastButtonState =1;
-    uint8_t buttonState =1;
-
+    uint8_t numbers[]={0x3F, 0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x27,0x7F,0x67};
+    uint8_t rxData;
+    DDRA = 0xFF;
     
+    UCSR0A = 0x00;
+    UCSR0B = 0x18; //0b00011000 Rx, Tx enable
+    UCSR0C = 0x16; //0b00010110 비동기 , no Parity, 1stop bit
+
+    UBRR0H = 0x00;
+    UBRR0L = 0x07; //115200 bps
+
     while (1)
-    {
-        uint8_t reading = PINE & _BV(PE0);
-        //버튼 상태 변경 확인
-        if (reading != lastButtonState)
+    {   
+        rxData = getch();  
+        if ((rxData >= 0x30) && (rxData <= 0x39))
         {
-            lastDebounceTime = milliseconds;
+            PORTA = numbers[rxData - 0x30];
         }
-        //디바운스 시간 경과 확인
-        if((milliseconds - lastDebounceTime) >debounceDelay)
-        {
-            //실제 버튼 상태 업데이트
-            if (reading != buttonState)
-            {
-                buttonState =reading;
-
-                //버튼이 눌렸을 때 동작 수행
-                if (buttonState = 0)
-                {
-                    PORTC ^= _BV(PC0);
-                }
-                
-            }
-            
-
-        }
-        //마지막 상태 저장
-        lastButtonState =reading;
+        
     }
     return 0;
+}
+
+
+
+ 
+
+
+SIGNAL(INT5_vect)
+{
+    cli();
+    timeStop ^= 1;
+    sei();
 }
