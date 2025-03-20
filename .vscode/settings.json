@@ -9,7 +9,9 @@
         "string.h": "c",
         "delay.h": "c",
         "interrupt.h": "c",
-        "io.h": "c"
+        "io.h": "c",
+        "uart0.h": "c",
+        "lcd.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"

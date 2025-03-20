@@ -1,19 +1,24 @@
-#ifndef UART1_H_
-#define UART1_H_
+
 #include <avr/io.h>
-#endif // UART0_h_
+
 
 void uart0Init(void)
 {
-    UCSR0A |= _BV(U2X1); // 2배속모드
+    // UCSR0A |= _BV(U2X1); // 2배속모드
+    // UCSR0B = 0x18; //0b00011000 Rx, Tx enable
+    // UCSR0C |= 0x06; //0b00010110 비동기 , no Parity, 1stop bit
+
+    // UBRR0H = 0x00;
+    // UBRR0L = 207; //9600 bps
+    UCSR0A = 0x00;
     UCSR0B = 0x18; //0b00011000 Rx, Tx enable
-    UCSR0C |= 0x06; //0b00010110 비동기 , no Parity, 1stop bit
+    UCSR0C = 0x16; //0b00010110 비동기 , no Parity, 1stop bit
 
     UBRR0H = 0x00;
-    UBRR0L = 207; //9600 bps
+    UBRR0L = 0x07; //115200 bps
 }
 
-void uart0Transmit(char data);
+void uart0Transmit(char data)
 {
     while (!(UCSR0A & _BV(UDRE0)))
     {
@@ -24,7 +29,7 @@ void uart0Transmit(char data);
 
 unsigned uart0Receive(void)
 {
-    while ((UCSR0A & _BV(RXC0)) == 0) // 문자버퍼에 있으면 루프 탈출
+    while ((UCSR0A & _BV(RXC0))) // 문자버퍼에 있으면 루프 탈출
     { 
         ;
     }

@@ -1,8 +1,4 @@
-//인터럽트로 FND를 점멸
-//INT5  phase 1 > phase 2 or phase 2 > phase 1
-//phase 1: FND가 빠르게 상승하는 코드 delay 100
-//phase 2: FND를 순간 멈추게 함
-
+//serial monitor에 숫자를 입력하여 fnd판에 입력
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
