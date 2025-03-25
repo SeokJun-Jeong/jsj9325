@@ -9,8 +9,8 @@
             "name": "PlatformIO",
             "includePath": [
                 "/home/seokjun/kubig2025/src",
-                "/home/seokjun/kubig2025/lib/lcd",
                 "/home/seokjun/kubig2025/lib/at25",
+                "/home/seokjun/kubig2025/lib/lcd",
                 "/home/seokjun/kubig2025/lib/sht20",
                 "/home/seokjun/kubig2025/lib/uart0",
                 ""
@@ -19,8 +19,8 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "/home/seokjun/kubig2025/src",
-                    "/home/seokjun/kubig2025/lib/lcd",
                     "/home/seokjun/kubig2025/lib/at25",
+                    "/home/seokjun/kubig2025/lib/lcd",
                     "/home/seokjun/kubig2025/lib/sht20",
                     "/home/seokjun/kubig2025/lib/uart0",
                     ""
