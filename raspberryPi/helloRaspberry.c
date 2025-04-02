@@ -1,5 +1,6 @@
 //cc helloRaspberry.c -lwiringPi -lwiringPiDev
 //./a.out
+//LED1번 끼기
 #include <stdio.h>
 #include <wiringPi.h>
 

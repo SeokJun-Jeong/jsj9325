@@ -1,4 +1,4 @@
-
+//sw를 눌러 led에 on/off하기
 #include <stdio.h>
 #include <wiringPi.h>
 

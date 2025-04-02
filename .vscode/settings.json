@@ -13,7 +13,10 @@
         "uart0.h": "c",
         "lcd.h": "c",
         "module.h": "c",
-        "kernel.h": "c"
+        "kernel.h": "c",
+        "softtone.h": "c",
+        "wiringpii2c.h": "c",
+        "wiringpi.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"
