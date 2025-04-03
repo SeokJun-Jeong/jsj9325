@@ -1,4 +1,4 @@
-//RGB LED 빨 > 녹 >파 > 자연스럽게 변화되는 색 나오기
+//servo모터 돌리기
 #include <wiringPi.h>
 #include <wiringPiI2C.h>
 #include <stdio.h>

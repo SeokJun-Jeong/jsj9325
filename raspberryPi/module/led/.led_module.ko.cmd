@@ -1,0 +1,1 @@
+savedcmd_/home/seokjun/jsj9325/raspberryPi/module/led/led_module.ko := ld -r -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T arch/arm64/module.lds -o /home/seokjun/jsj9325/raspberryPi/module/led/led_module.ko /home/seokjun/jsj9325/raspberryPi/module/led/led_module.o /home/seokjun/jsj9325/raspberryPi/module/led/led_module.mod.o;  true

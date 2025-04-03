@@ -1,3 +1,4 @@
+//버저에 소리내기
 #include <stdio.h>
 #include <wiringPi.h>
 
