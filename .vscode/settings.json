@@ -16,7 +16,10 @@
         "kernel.h": "c",
         "softtone.h": "c",
         "wiringpii2c.h": "c",
-        "wiringpi.h": "c"
+        "wiringpi.h": "c",
+        "fs.h": "c",
+        "gpio.h": "c",
+        "init.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"

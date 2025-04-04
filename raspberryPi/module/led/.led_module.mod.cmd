@@ -1,1 +1,0 @@
-savedcmd_/home/seokjun/jsj9325/raspberryPi/module/led/led_module.mod := printf '%s\n'   led_module.o | awk '!x[$$0]++ { print("/home/seokjun/jsj9325/raspberryPi/module/led/"$$0) }' > /home/seokjun/jsj9325/raspberryPi/module/led/led_module.mod

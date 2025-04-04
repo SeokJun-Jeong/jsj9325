@@ -1,0 +1,1 @@
+savedcmd_/home/seokjun/jsj9325/raspberryPi/module/gpiomem/gpiomem_module.mod := printf '%s\n'   gpiomem_module.o | awk '!x[$$0]++ { print("/home/seokjun/jsj9325/raspberryPi/module/gpiomem/"$$0) }' > /home/seokjun/jsj9325/raspberryPi/module/gpiomem/gpiomem_module.mod

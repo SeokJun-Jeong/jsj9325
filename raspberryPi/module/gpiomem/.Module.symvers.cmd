@@ -1,0 +1,1 @@
+savedcmd_/home/seokjun/jsj9325/raspberryPi/module/gpiomem/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/seokjun/jsj9325/raspberryPi/module/gpiomem/Module.symvers -T /home/seokjun/jsj9325/raspberryPi/module/gpiomem/modules.order -i Module.symvers -e 
