@@ -1,4 +1,3 @@
-//  -/ds/stack$ gedit stack.c
 
 #include <stdio.h>
 int stack[100];
@@ -25,8 +24,7 @@ int main(void)
    push(300);
    
    int re = pop();  
-   printf("1st pop(): %d\n",re);    // push와 pull이 선입선출방식이어서 300이 먼저 입력됨
-   re = pop();
+   printf("1st pop(): %d\n",re);    // push와 pop은 먼저 들어온것이 먼저 들어옴 
    printf("2st pop(): %d\n",re);
    re = pop();
    printf("3st pop(): %d\n",re);
