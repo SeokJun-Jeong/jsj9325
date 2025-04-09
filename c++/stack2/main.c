@@ -1,19 +1,6 @@
-//  -/ds/stack$ gedit stack.c
-
+//gcc -o testStack stack.c <testStack파일 생성
 #include <stdio.h>
-int stack[100];
-int tos;    //top of stack
-
-
-void push(int data)
-{
-
-}
-
-int pop(void)  //re가 int기 때문에
-{
-
-}
+#include "stack.h"	//전처리 지시자
 
 
 int main(void)
