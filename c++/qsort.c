@@ -3,7 +3,7 @@
 //qsort
 
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> 
 #include<time.h>
 
 int compare(const void *a, const void *b) //const(불변)  *는 주소값
