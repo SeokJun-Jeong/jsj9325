@@ -25,7 +25,7 @@ int main(void)
    push(300);
    
    int re = pop();  
-   printf("1st pop(): %d\n",re);
+   printf("1st pop(): %d\n",re);    // push와 pull이 선입선출방식이어서 300이 먼저 입력됨
    re = pop();
    printf("2st pop(): %d\n",re);
    re = pop();
