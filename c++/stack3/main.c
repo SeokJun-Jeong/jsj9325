@@ -52,7 +52,7 @@ int main(void)
    initStack(&s1);
    initStack(&s2);
    
-   push(&s1,100);    
+   push(&s1,100);    //구조체 자료는 인자를 줄이기 위해 오버헤드 사용
    push(&s1,200);
    push(&s1,300);
    

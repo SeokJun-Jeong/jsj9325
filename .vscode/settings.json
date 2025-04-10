@@ -11,7 +11,8 @@
         "interrupt.h": "c",
         "io.h": "c",
         "uart0.h": "c",
-        "lcd.h": "c"
+        "lcd.h": "c",
+        "queue.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"

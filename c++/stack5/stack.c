@@ -8,7 +8,7 @@ void initStack(Stack *ps, int size, int eleSize)
 {
 	//ps->pArr = malloc(sizeof(int) *size);
 	ps->pArr = malloc(eleSize * size);
-	assert(ps->pArr /*!= NULL*/);	   //NULL = 0
+	assert(ps->pArr != pq->size);	   //NULL = 0
 	ps->eleSize = eleSize;
 	ps->size = size;
     ps->tos = 0;
