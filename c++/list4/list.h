@@ -1,0 +1,27 @@
+#ifndef LIST_H
+#define LIST_H
+
+typedef struct node
+{
+    // int data;
+    struct node *next;
+}Node;
+
+
+typedef struct list
+{
+    Node *ptr;
+    int eleSize;
+    //dummy node type 하나
+}List;
+
+void initlist(List *pList,int eleSize);
+void cleanuplist(List *pList);
+
+void insertFirstNode(List *pList,void *pData);
+void insertNode(List *pList, const void *pPrevData, const void *pData);
+void deleteNode(List *pList, const void *pData);
+
+void printList(const List *pList, void (*print)(const void *));
+
+#endif
