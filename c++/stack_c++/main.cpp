@@ -3,9 +3,9 @@
 
 int main()  //void 안 적어도 됨
 {
-   Stack s1,s2; 
-   s1.initStack(10);  //object oriented형태
-   s2.initStack(100);
+   Stack s1(10),s2(100); 
+   // s1.initStack(10);  //object oriented형태
+   // s2.initStack(100);
    
    s1.push(100);    
    s1.push(200);
@@ -25,8 +25,8 @@ int main()  //void 안 적어도 됨
    printf("s2 3st pop(): %d\n",s2.pop());
    
 
-   s1.cleanupStack();
-   s2.cleanupStack();
+   // s1.cleanupStack();
+   // s2.cleanupStack();
    return 0;
 }
 

@@ -7,8 +7,11 @@ struct Stack
    int size;
    int tos;
 
-   void initStack(int size);
-   void cleanupStack();
+   // void initStack(int size);  stack 변환
+   Stack(int size);  //constructor
+
+   // void cleanupStack();  ~stack 변환
+   ~Stack();         //destructor
 
    void push(int data);  
    int pop();

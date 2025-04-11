@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
-void Stack::initStack(int size)    //Stack::을 붙여 구조체 활용
+Stack::Stack(int size)    //Stack::을 붙여 구조체 활용
 {
 	// this->pArr = (int *)malloc(sizeof(int) *size);
     this->pArr = new int[size];
@@ -13,7 +13,7 @@ void Stack::initStack(int size)    //Stack::을 붙여 구조체 활용
     this->tos = 0;
 }
 
-void Stack::cleanupStack()
+Stack::~Stack()
 {
 	// free(this->pArr);
     delete [] this->pArr;
