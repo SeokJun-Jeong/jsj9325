@@ -1,12 +1,14 @@
 #ifndef STACK_H
 #define STACK_H
 
-struct Stack
+class Stack
 {
+   private:  //implementation(내부구현)
    int *pArr;
    int size;
    int tos;
 
+   public:           //내부구현 접근
    // void initStack(int size);  stack 변환
    Stack(int size);  //constructor
 

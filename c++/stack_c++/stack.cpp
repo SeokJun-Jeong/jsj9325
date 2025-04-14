@@ -1,7 +1,9 @@
 #include "stack.h"
 //#include <stdio.h> malloc 사용 x > new, delete사용
-#include <stdlib.h>
-#include <assert.h>
+#include <cstdlib>
+#include <cassert>
+#include <cstdio> //namespace적용
+
 
 Stack::Stack(int size)    //Stack::을 붙여 구조체 활용
 {

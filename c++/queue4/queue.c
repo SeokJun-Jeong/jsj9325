@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "queue.h"
 #include <assert.h>
@@ -7,10 +6,10 @@ void initQueue(Queue *pq,int size)   //초기화
 {
     pq->pArr = malloc(sizeof(int) * size);
     //pq->pArr != NULL;
-    
+    assert(pq->pArr );
     pq->size = size;
-    pq->rear = 0;
-    pq->front = 0;
+
+    pq->front = pq->rear = 0;
 }
 
 void cleanupQueue(Queue *pq)
@@ -22,7 +21,7 @@ void push(Queue *pq, int data)
 {
 
     
-    assert(pq->rear != pq->front);
+    assert(pq->rear != pq->size);
 
 
     pq->pArr[pq->rear] = data;
@@ -32,10 +31,11 @@ void push(Queue *pq, int data)
 int pop(Queue *pq)
 {
 
-    assert(pq->rear != pq->front);
+    assert(pq->front != pq->rear);
 
     
-    int i = pq->front;
+    int index = pq->front;
 	++pq->front;
-	return pq->pArr[i];
+
+	return pq->pArr[index];
 }

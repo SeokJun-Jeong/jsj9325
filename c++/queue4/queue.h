@@ -1,17 +1,16 @@
 #ifndef QUEUE_H
 #define QUEUE_H
-// #define QUEUESIZE 100
+//#define QUEUESIZE 100
 
-typedef struct queue
-{
-   //int array[QUEUESIZE];
-   int *pArr;
-   int size;
-   int front;
-   int rear;
-}Queue;
+typedef struct {
+	//int array[QUEUESIZE];
+	int *pArr;
+	int size;
+	int front;
+	int rear;
+} Queue;
 
-void initQueue(Queue *pq,int size);
+void initQueue(Queue *pq, int size);
 void cleanupQueue(Queue *pq);
 
 void push(Queue *pq, int data);

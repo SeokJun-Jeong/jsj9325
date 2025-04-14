@@ -16,7 +16,8 @@
         "array": "c",
         "string": "c",
         "string_view": "c",
-        "stack.h": "c"
+        "stack.h": "c",
+        "list.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"
