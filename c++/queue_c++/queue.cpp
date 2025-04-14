@@ -3,7 +3,7 @@
 #include "queue.h"
 #include <cassert>
 
-Queue::Queue(int size)   //초기화
+Queue::Queue(int size)   //객체가 생성될때 자동적으로 호출되는 멤버함수
 {
     this->pArr = new int[size];
     assert(this->pArr);
@@ -12,7 +12,7 @@ Queue::Queue(int size)   //초기화
     this->front =this->rear= 0;
 }
 
-Queue::~Queue()
+Queue::~Queue()         //객체가 소멸될때 자동적으로 호출되는 멤버함수
 {
     delete [] this->pArr;
 }

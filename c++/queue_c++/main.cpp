@@ -27,8 +27,8 @@ int main()
    std::cout << "q2 2nd pop() : " << q2.pop() << std::endl;
    std::cout << "q2 3rd pop() : " << q2.pop() << std::endl;
 
-   // cleanupQueue(&q1);
-   // cleanupQueue(&q2);
+   // q1.cleanupQueue();
+   // q2.cleanupQueue();
 
    return 0;
 }
