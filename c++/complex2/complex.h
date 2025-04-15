@@ -7,7 +7,7 @@ public: //인터페이스
     Complex();                      //default constructor(기본생산자)
     Complex(double re);             //convert. constructor(변환생산자)
     Complex(double re, double im);  //construct(생산자)
-    ~Complex();
+    ~Complex();                      //소멸자ㄴ
     
     //void operator = (Complex c);
     // void operator=(const Complex *pc);   //pointer 사용 사용x
