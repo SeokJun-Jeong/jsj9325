@@ -7,10 +7,10 @@ Employee::Employee(int id, String name, Employee *pManager)
     this->pManager = pManager;
 }
 
-Employee::~Employee()
-{
+// Employee::~Employee()
+// {
 
-}
+// }
 
 int Employee::getId()
 {
