@@ -23,7 +23,7 @@ foreach(SUBDIR ${SUBDIRS})
         get_filename_component(EXECUTABLE_NAME ${SUBDIR} NAME_WE)
         get_filename_component(EXECUTABLE_DIR ${EXECUTABLE} DIRECTORY)
         file(GLOB_RECURSE SOURCES "${EXECUTABLE_DIR}/*.cpp")
-        add_executable(${EXECUTABLE_NAME} ${SOURCES})
+        add_executable(${EXECUTABLE_NAME} ${SOURCES}) 
     endforeach()
 endforeach()
 
