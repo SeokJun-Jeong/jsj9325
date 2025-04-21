@@ -1,3 +1,4 @@
+//vector사용
 #include <iostream>
 #include <vector>
 
