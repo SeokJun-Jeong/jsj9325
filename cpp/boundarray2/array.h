@@ -44,7 +44,7 @@ public:
 
 
 #include <cassert>
-// #include "array.h"    같이 참조하므로 삭제
+
 // const int ARRAY_SIZE = 100;
 
 template <typename T>
@@ -154,3 +154,4 @@ int Array<T>::size() const
 }
 
 #endif
+

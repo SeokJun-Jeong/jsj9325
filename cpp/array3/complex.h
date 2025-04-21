@@ -19,8 +19,8 @@ public:
     // +=,-=,*=,/= 0
     // %=, &=,, |=,^= X
     
-    bool operator==(const Complex& rhs);
-    bool operator!=(const Complex& rhs);
+    bool operator==(const Complex& rhs) const;
+    bool operator!=(const Complex& rhs) const;
     // !=, >, <, <=, >=,==
     const Complex operator+(const Complex& rhs);
     const Complex operator-(const Complex& rhs);
@@ -35,6 +35,10 @@ public:
     // type casting X
     // Complex *operator&(){return this;}
     // const Complex *operator&() {return this;}
+    double real() const;
+    double imag() const;
+    void real(double re);
+    void imag(double im);
 };
 
 

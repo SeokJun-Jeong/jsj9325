@@ -18,15 +18,16 @@ public:
 
     String& operator=(const String& rhs);    //s3=s1
 
-    bool operator==(const String& rhs);     
+    bool operator==(const String& rhs) const;     
 
-    const String operator+(const String& rhs);
+    const String operator+(const String& rhs) const;
 
 
-    const char *c_str();
-    int size();
+    const char *c_str() const;
+    int size() const;
 
     // set ??
+    inline std::ostream& operator<<(std::ostream& out, const String& rhs)
 };
 
 

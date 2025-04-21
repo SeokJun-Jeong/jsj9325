@@ -2,64 +2,65 @@
 #include <cassert>
 #include <cstring>
 
-std::ostream& operator<<(std::ostream& out, const String& rhs)
+inline std::ostream& operator<<(std::ostream& out, const String& rhs)
 {
     return out << rhs.str;
 }
 
 String::String()
+:str_(new )
 {
-    this->str = new char[1];
-    this->str[0] = '\0';
-    this->len = 0;
+    str = new char[1];
+    str[0] = '\0';
+    len = 0;
 }
 
 String::String(const char *s)
 {
-    this->str = new char[strlen(s)+1];  //malloc
-    assert(this->str);
-    strcpy(this->str, s);
+    str = new char[strlen(s)+1];  //malloc
+    assert(str);
+    strcpy(str, s);
 
-    this->len = strlen(s);
+    len = strlen(s);
 }
 
 
 String::String(const String& rhs)
 {   
-    this->str = new char[rhs.len + 1];
-    assert(this->str);
-    strcpy(this->str, rhs.str);
+    str = new char[rhs.len + 1];
+    assert(str);
+    strcpy(str, rhs.str);
     
-    this->len = rhs.len;
+    len = rhs.len;
 }
 
-String::~String()
+inline String::~String()
 {   
-    delete [] this->str;        //free
+    delete [] str;        //free
 }
 
 
 String& String::operator=(const String& rhs)
 {
-    delete [] this->str; //공간 삭제후 공간 재 할당
-    this->str = new char[rhs.len];
-    assert(this->str);
-    strcpy(this->str, rhs.str);
+    delete [] str; //공간 삭제후 공간 재 할당
+    str = new char[rhs.len];
+    assert(str);
+    strcpy(str, rhs.str);
 
-    this->len = rhs.len;
+    len = rhs.len;
 
     return *this;
 }
 
 bool String::operator==(const String& rhs)
 {
-    return strcmp(this->str, rhs.str) == 0;
+    return strcmp(str, rhs.str) == 0;
 }
 
 const String String::operator+(const String& rhs)
 {
-    char buf[this->len + rhs.len + 1];
-    strcpy(buf, this->str);
+    char buf[len + rhs.len + 1];
+    strcpy(buf, str);
     strcat(buf, rhs.str);
     String result(buf);
 
@@ -67,12 +68,12 @@ const String String::operator+(const String& rhs)
 }
 
 
-const char *String::c_str()
+inline const char *String::c_str()
 {
-    return this->str;
+    return str;
 }
 
-int String::size()
+inline int String::size()
 {
-    return this->len;
+    return len;
 }
