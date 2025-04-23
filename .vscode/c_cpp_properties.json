@@ -1,45 +1,6 @@
-//
-// !!! WARNING !!! AUTO-GENERATED FILE!
-// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
-// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
-//
 {
     "configurations": [
         {
-            // "name": "PlatformIO",
-            // "includePath": [
-            //     "/home/seokjun/kubig2025/src",
-            //     "/home/seokjun/kubig2025/lib/at25",
-            //     "/home/seokjun/kubig2025/lib/lcd",
-            //     "/home/seokjun/kubig2025/lib/sht20",
-            //     "/home/seokjun/kubig2025/lib/uart0",
-            //     ""
-            // ],
-            // "browse": {
-            //     "limitSymbolsToIncludedHeaders": true,
-            //     "path": [
-            //         "/home/seokjun/kubig2025/src",
-            //         "/home/seokjun/kubig2025/lib/at25",
-            //         "/home/seokjun/kubig2025/lib/lcd",
-            //         "/home/seokjun/kubig2025/lib/sht20",
-            //         "/home/seokjun/kubig2025/lib/uart0",
-            //         ""
-            //     ]
-            // },
-            // "defines": [
-            //     "F_CPU=16000000L",
-            //     "PLATFORMIO=60118",
-            //     "ARDUINO_AVR_ATmega128",
-            //     "__AVR_ATmega128__",
-            //     ""
-            // ],
-            // "cStandard": "gnu11",
-            // "cppStandard": "gnu++11",
-            // "compilerPath": "/home/seokjun/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
-            // "compilerArgs": [
-            //     "-mmcu=atmega128",
-            //     ""
-            // ]
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
