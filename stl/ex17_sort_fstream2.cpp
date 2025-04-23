@@ -1,4 +1,4 @@
-//다른식 + 평균 추가
+//다른식 + 평균 partition, merge추가
 #include <sstream>
 #include <iostream>
 #include <fstream>
@@ -64,12 +64,40 @@ int main()
     }
     file.close();
 
-    sort(students.begin(), students.end(), [](const Student &a, const Student &b) {return a.average() < b.average(); });
-    for (const auto& student : students)
+    sort(students.begin(), students.end(), [](const Student &a, const Student &b) 
+    {
+        return a.average() < b.average(); 
+    });
+
+    //partition
+    auto fail_bound = partition(students.begin(),students.end(),[](Student& st)
+    {
+        return st.average() < 60;
+    });
+    cout << (*fail_bound).average() << endl;
+    vector<Student> fail_students(students.begin(), fail_bound);
+    vector<Student> success_students(fail_bound, students.end());
+
+    for (const auto &student : fail_students)
+    {
+        student.print();
+    }
+    cout << "합격" << endl;
+    for (const auto &student : success_students)
     {
         student.print();
     }
     
+    //merge
+    vector<Student> merge_students;
+    merge(fail_students.begin(),fail_students.end(),success_students.begin(),success_students.end(),back_inserter(merge_students));
 
+    cout << "합친 vector : " << endl;
+
+    for (const auto &student : merge_students)
+    {
+        student.print();
+    }
+    
     return 0;
 }
