@@ -67,7 +67,8 @@
         "streambuf": "cpp",
         "cinttypes": "cpp",
         "typeinfo": "cpp",
-        "chrono": "cpp"
+        "chrono": "cpp",
+        "variant": "cpp"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"
