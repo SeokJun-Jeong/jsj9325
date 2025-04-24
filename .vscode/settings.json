@@ -68,7 +68,9 @@
         "cinttypes": "cpp",
         "typeinfo": "cpp",
         "chrono": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "future": "cpp",
+        "condition_variable": "cpp"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"
