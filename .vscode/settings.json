@@ -70,7 +70,9 @@
         "chrono": "cpp",
         "variant": "cpp",
         "future": "cpp",
-        "condition_variable": "cpp"
+        "condition_variable": "cpp",
+        "unistd.h": "c",
+        "mman.h": "c"
     },
     "cmake.sourceDirectory": "/home/seokjun/kubig2025",
     "C_Cpp.errorSquiggles": "disabled"

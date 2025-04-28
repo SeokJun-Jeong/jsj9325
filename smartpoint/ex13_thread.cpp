@@ -11,9 +11,10 @@ void increment()
 {
     for (int i = 0; i < 1000; ++i)
     {
+
         lock_guard<mutex> lock(mtx);
         ++counter;
-           
+        
     }
     
 }
