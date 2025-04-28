@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(network)
 
-# 모든 .cpp 파일 자동 감지/home/seokjun/kuBig2025/network/
+# 모든 .cpp 파일 자동 감지/home/aa/kuBig2025/stl/studnet.txt
 file(GLOB EXECUTABLES "${CMAKE_CURRENT_LIST_DIR}/*.c")
 
 foreach(EXECUTABLE ${EXECUTABLES})
@@ -30,4 +30,3 @@ foreach(SUBDIR ${SUBDIRS})
         add_executable(${EXECUTABLE_NAME} ${SOURCES})
     endforeach()
 endforeach()
-
