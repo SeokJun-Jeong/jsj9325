@@ -14,3 +14,8 @@ add_subdirectory(c_example/part3)
 # add_subdirectory(cpp)
 add_subdirectory(stl)
 add_subdirectory(smartpoint)
+add_subdirectory(network/tcp)
+add_subdirectory(network/util)
+add_subdirectory(network/ipc)
+
+
