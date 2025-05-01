@@ -1,5 +1,5 @@
 #include <arpa/inet.h>
-#include <signal>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -50,36 +50,38 @@ int main(int argc, char *argv[])
         error_handling("바인드 에러!!!");
     if (listen(serv_sock, 5) == -1)
         error_handling("리슨 에러"); // 대기!!!
-  
-          while (1)
+
+    /// fork, child!!! 기능 echo -read -> write
+    while (1)
+    {
+        clnt_addr_size = sizeof(clnt_addr);
+        clnt_sock = accept(serv_sock, (struct sockaddr *)&clnt_addr, &clnt_addr_size);
+        // accept!! 대기
+        if (clnt_sock == -1)
+            continue;
+        else
+            printf("Conneted client : %s \n", inet_ntoa(clnt_addr.sin_addr));
+        pid = fork();
+        if (pid == -1)
         {
-            clnt_addr_size = sizeof(clnt_addr);
-            clnt_sock = accept(serv_sock, (struct sockaddr *)&clnt_addr, &clnt_addr_size);
-            if (clnt_sock == -1)
-                continue;
-            else
-                printf("Conneted client %d : %s \n", i + 1, inet_ntoa(clnt_addr.sin_addr));
-            pid = fork();
-            if (pid == -1)
-            {
-                close(clnt_sock);
-                continue;
-            }
-            if (pid == 0)
-            {
-                 close(serv_sock);
-                while (str_len = read(clnt_sock, buf, BUF_SIZE)!=0)
-                {
-                    white(clnt_sock, buf, str_len);
-                }
-                close(clnt_sock);
-                puts("client 연결 종료.. %s", inet_ntoa(clnt_addr.sin_addr));
-            }
-            else
-            {
-                close(clnt_sock);
-            }
+            close(clnt_sock);
+            continue;
         }
+        if (pid == 0)
+        {
+            close(serv_sock);
+            while (str_len = read(clnt_sock, buf, BUF_SIZE) != 0)
+            {
+                puts(buf);
+                write(clnt_sock, buf, str_len);
+            }
+            close(clnt_sock);
+            printf("client 연결 종료... %s \n", inet_ntoa(clnt_addr.sin_addr));
+            return 0;
+        }
+        else
+            close(clnt_sock);
+    }
 
     close(serv_sock);
 
@@ -91,4 +93,15 @@ void error_handling(char *message)
     fputs(message, stderr);
     fputc('\n', stderr);
     exit(1);
+}
+
+void read_childproc(int sig)
+{
+    int status;
+    pid_t id = waitpid(-1, &status, WNOHANG);
+    if (WIFEXITED(status))
+    {
+        printf("프로세스 제거 id: %d \n", id);
+        printf("자식이 보낸 번호: %d \n", WEXITSTATUS(status));
+    }
 }

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
-project(network/multiprocess)
+project(network_multiProcess)
 
-# 모든 .cpp 파일 자동 감지/home/aa/kuBig2025/stl/studnet.txt
+# 모든 .c 파일 자동 감지/home/aa/kuBig2025/stl/studnet.txt
 file(GLOB EXECUTABLES "${CMAKE_CURRENT_LIST_DIR}/*.c")
 
 foreach(EXECUTABLE ${EXECUTABLES})
@@ -19,8 +19,7 @@ foreach(SUBDIR ${SUBDIRS})
 endforeach()
 set(SUBDIRS ${SUBDIRS_FILTERED})
 
-# 각 서브디렉토리의 main.cpp 파일을 찾아서 실행 파일 생성
-
+# 각 서브디렉토리의 main.c 파일을 찾아서 실행 파일 생성
 foreach(SUBDIR ${SUBDIRS})
     file(GLOB EXECUTABLES "${SUBDIR}/main.c")
     foreach(EXECUTABLE ${EXECUTABLES})
