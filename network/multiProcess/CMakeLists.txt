@@ -17,7 +17,7 @@ foreach(SUBDIR ${SUBDIRS})
         list(APPEND SUBDIRS_FILTERED "${CMAKE_CURRENT_LIST_DIR}/${SUBDIR}")
     endif()
 endforeach()
-set(SUBDIRS ${SUBDIRS_FILTERED})
+set(SUBDIRS ${SUBDIRS_FILTERED})s
 
 # 각 서브디렉토리의 main.c 파일을 찾아서 실행 파일 생성
 foreach(SUBDIR ${SUBDIRS})
