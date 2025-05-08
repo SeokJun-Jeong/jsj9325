@@ -1,6 +1,6 @@
 def main():
     print(1234567)
-    print(123_456_7) #123,456,7 
+    print(123_456_789) #123,456,789
     print("seok jun jeong")
     print(3.141592)
     
