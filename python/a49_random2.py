@@ -7,7 +7,7 @@ import math
 import random
 
 import matplotlib.pyplot as plt
-
+import numpy as np
 
 def main():
     n_samples = 10000
@@ -19,20 +19,37 @@ def main():
 
     # uniform 균등 분포 결과 테스트
     for _ in range(n_samples):
+        value = random.uniform(a,b)
+        means.append(value)
+    plt.hist(means, bins=sample_size)
+    plt.show()
+
+    # uniform 균등 분포 평균 결과 테스트
+    for _ in range(n_samples):
         sample = [random.uniform(a, b) for _ in range(sample_size)]
         mean = sum(sample) / sample_size
         means.append(mean)
-
+    print("표준 편차: ", np.std(means))
     plt.hist(means, bins=sample_size)
-
+    plt.show()
+    
+    #gauss() 함수 데이터
     mu = (a + b) / 2
     sigma = math.sqrt((b - a) ** 2 / (12 * sample_size))  # 표준 편차
-
+    print("sigma: ", sigma)
     # x = [mu - 4 * sigma + i * (8 * sigma / 100) for i in range(100)]
     # y = [random.gauss(mu, sigma) for t in x]
 
     # plt.plot(x, y)
+    gauss_data = []
+    for _ in range(n_samples):
+        gauss_data.append(random.gauss(mu=mu, sigma=sigma))
+    print(np.std(gauss_data))
+
+    plt.hist(gauss_data, bins=sample_size)
     plt.show()
+    
+    
 
 
 if __name__ == "__main__":
