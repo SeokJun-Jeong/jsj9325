@@ -19,5 +19,6 @@ def main():
     print(students[0] > students[1])
     print(students[0] == students[1])
     print(students[0] < students[1])
+    
 if __name__ == "__main__":
     main()
