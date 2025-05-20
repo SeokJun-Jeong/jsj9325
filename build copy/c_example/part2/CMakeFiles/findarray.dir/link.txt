@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/findarray.dir/findarray.c.o -o findarray 

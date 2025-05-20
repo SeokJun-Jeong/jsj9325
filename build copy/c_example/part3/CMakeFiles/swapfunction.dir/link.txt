@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/swapfunction.dir/swapfunction.c.o -o swapfunction 

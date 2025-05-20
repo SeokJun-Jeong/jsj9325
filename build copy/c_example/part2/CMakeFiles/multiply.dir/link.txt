@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/multiply.dir/multiply.c.o -o multiply 

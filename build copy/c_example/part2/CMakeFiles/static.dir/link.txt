@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/static.dir/static.c.o -o static 

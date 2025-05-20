@@ -1,0 +1,1 @@
+/usr/bin/gcc -g CMakeFiles/function1.dir/function1.c.o -o function1 

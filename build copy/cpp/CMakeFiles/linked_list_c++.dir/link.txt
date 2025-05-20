@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/linked_list_c++.dir/linked_list_c++/list.cpp.o CMakeFiles/linked_list_c++.dir/linked_list_c++/main.cpp.o -o linked_list_c++ 

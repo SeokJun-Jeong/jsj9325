@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/stack_c++.dir/stack_c++/main.cpp.o CMakeFiles/stack_c++.dir/stack_c++/stack.cpp.o -o stack_c++ 

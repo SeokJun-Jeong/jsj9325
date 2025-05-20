@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/queuecpp1.dir/queuecpp1/main.cpp.o CMakeFiles/queuecpp1.dir/queuecpp1/queue.cpp.o -o queuecpp1 

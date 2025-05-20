@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/shape.dir/shape/circle.cpp.o CMakeFiles/shape.dir/shape/main.cpp.o CMakeFiles/shape.dir/shape/rectangle.cpp.o CMakeFiles/shape.dir/shape/shape.cpp.o -o shape 
