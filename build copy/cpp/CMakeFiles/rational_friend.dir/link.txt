@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/rational_friend.dir/rational_friend/Rational.cpp.o CMakeFiles/rational_friend.dir/rational_friend/main.cpp.o -o rational_friend 

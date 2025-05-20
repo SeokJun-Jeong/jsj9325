@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/ex18_exceution.dir/ex18_exceution.cpp.o -o ex18_exceution 

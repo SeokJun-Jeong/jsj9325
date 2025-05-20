@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/proscore.dir/proscore.c.o -o proscore 

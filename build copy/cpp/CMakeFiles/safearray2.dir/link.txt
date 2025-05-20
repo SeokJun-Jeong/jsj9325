@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/safearray2.dir/safearray2/main.cpp.o CMakeFiles/safearray2.dir/safearray2/safearray.cpp.o -o safearray2 

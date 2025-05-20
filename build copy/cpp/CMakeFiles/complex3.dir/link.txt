@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/complex3.dir/complex3/complex.cpp.o CMakeFiles/complex3.dir/complex3/main.cpp.o -o complex3 

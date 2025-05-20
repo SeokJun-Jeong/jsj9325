@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/queue_c++.dir/queue_c++/main.cpp.o CMakeFiles/queue_c++.dir/queue_c++/queue.cpp.o -o queue_c++ 

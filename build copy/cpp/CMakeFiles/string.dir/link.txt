@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/string.dir/string/main.cpp.o CMakeFiles/string.dir/string/string.cpp.o -o string 

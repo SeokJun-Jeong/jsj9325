@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/2022avgtemp.dir/2022avgtemp.c.o -o 2022avgtemp 

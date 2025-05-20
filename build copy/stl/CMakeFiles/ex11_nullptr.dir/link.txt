@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/ex11_nullptr.dir/ex11_nullptr.cpp.o -o ex11_nullptr 

@@ -1,1 +1,0 @@
-/usr/bin/gcc -g CMakeFiles/arrayassignment.dir/arrayassignment.c.o -o arrayassignment 

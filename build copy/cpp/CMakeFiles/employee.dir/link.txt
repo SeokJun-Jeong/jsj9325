@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/employee.dir/employee/employee.cpp.o CMakeFiles/employee.dir/employee/main.cpp.o -o employee 

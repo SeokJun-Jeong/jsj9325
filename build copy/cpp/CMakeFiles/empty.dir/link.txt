@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -pedantic -g -g -O0 CMakeFiles/empty.dir/empty/empty.cpp.o CMakeFiles/empty.dir/empty/main.cpp.o -o empty 
