@@ -129,6 +129,32 @@ hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
+#=============================================================================
+# Target rules for targets named basic_op
+
+# Build rule for target.
+basic_op: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 basic_op
+.PHONY : basic_op
+
+# fast build rule for target.
+basic_op/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basic_op.dir/build.make CMakeFiles/basic_op.dir/build
+.PHONY : basic_op/fast
+
+#=============================================================================
+# Target rules for targets named matOp
+
+# Build rule for target.
+matOp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matOp
+.PHONY : matOp
+
+# fast build rule for target.
+matOp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matOp.dir/build.make CMakeFiles/matOp.dir/build
+.PHONY : matOp/fast
+
 01_helloWorld.o: 01_helloWorld.cpp.o
 .PHONY : 01_helloWorld.o
 
@@ -153,6 +179,54 @@ hello/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/01_helloWorld.cpp.s
 .PHONY : 01_helloWorld.cpp.s
 
+02_basicOp.o: 02_basicOp.cpp.o
+.PHONY : 02_basicOp.o
+
+# target to build an object file
+02_basicOp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basic_op.dir/build.make CMakeFiles/basic_op.dir/02_basicOp.cpp.o
+.PHONY : 02_basicOp.cpp.o
+
+02_basicOp.i: 02_basicOp.cpp.i
+.PHONY : 02_basicOp.i
+
+# target to preprocess a source file
+02_basicOp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basic_op.dir/build.make CMakeFiles/basic_op.dir/02_basicOp.cpp.i
+.PHONY : 02_basicOp.cpp.i
+
+02_basicOp.s: 02_basicOp.cpp.s
+.PHONY : 02_basicOp.s
+
+# target to generate assembly for a file
+02_basicOp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/basic_op.dir/build.make CMakeFiles/basic_op.dir/02_basicOp.cpp.s
+.PHONY : 02_basicOp.cpp.s
+
+03_matOp.o: 03_matOp.cpp.o
+.PHONY : 03_matOp.o
+
+# target to build an object file
+03_matOp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matOp.dir/build.make CMakeFiles/matOp.dir/03_matOp.cpp.o
+.PHONY : 03_matOp.cpp.o
+
+03_matOp.i: 03_matOp.cpp.i
+.PHONY : 03_matOp.i
+
+# target to preprocess a source file
+03_matOp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matOp.dir/build.make CMakeFiles/matOp.dir/03_matOp.cpp.i
+.PHONY : 03_matOp.cpp.i
+
+03_matOp.s: 03_matOp.cpp.s
+.PHONY : 03_matOp.s
+
+# target to generate assembly for a file
+03_matOp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matOp.dir/build.make CMakeFiles/matOp.dir/03_matOp.cpp.s
+.PHONY : 03_matOp.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +235,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... basic_op"
 	@echo "... hello"
+	@echo "... matOp"
 	@echo "... 01_helloWorld.o"
 	@echo "... 01_helloWorld.i"
 	@echo "... 01_helloWorld.s"
+	@echo "... 02_basicOp.o"
+	@echo "... 02_basicOp.i"
+	@echo "... 02_basicOp.s"
+	@echo "... 03_matOp.o"
+	@echo "... 03_matOp.i"
+	@echo "... 03_matOp.s"
 .PHONY : help
 
 

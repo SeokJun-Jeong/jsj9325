@@ -1,3 +1,5 @@
 /home/seokjun/kubig2025/openCV/part1/CMakeFiles/hello.dir
+/home/seokjun/kubig2025/openCV/part1/CMakeFiles/basic_op.dir
+/home/seokjun/kubig2025/openCV/part1/CMakeFiles/matOp.dir
 /home/seokjun/kubig2025/openCV/part1/CMakeFiles/edit_cache.dir
 /home/seokjun/kubig2025/openCV/part1/CMakeFiles/rebuild_cache.dir
