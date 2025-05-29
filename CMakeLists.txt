@@ -20,4 +20,5 @@ project(MainProject)
 # add_subdirectory(network/multiProcess)
 add_subdirectory(openCV/part1)
 add_subdirectory(openCV/part2)
+add_subdirectory(openCV/part3)
 
