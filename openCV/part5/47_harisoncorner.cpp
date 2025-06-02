@@ -13,20 +13,25 @@ String folderPath = "/home/seokjun/kubig2025/openCV/data/";
 
 int main()
 {
-    Mat img = imread(folderPath + "kids.png");
+    Mat img = imread(folderPath + "building.jpg", IMREAD_GRAYSCALE);
     vector<Mat> images;
     images.push_back(img);
-    images.emplace_back(img.clone());
-
-    CascadeClassifier classifier(folderPath + "haarcascade_frontalface_default.xml");
-
-    vector<Rect> faces;
-    classifier.detectMultiScale(img, faces);
-
-    for (auto &rect : faces)
+    Mat harris,harris_norm;
+    cornerHarris(img, harris, 3, 3, 0.04);
+    cout << harris.type() << endl;
+    normalize(harris, harris_norm, 0, 255, NORM_MINMAX, CV_8U);
+    images.push_back(harris_norm);
+    for (int j = 1; j <harris.rows -1; j++)
     {
-        rectangle(img, rect, red, 2);
+        for (int i = 1; i < harris.cols -1; ++i)
+        {
+            if (harris_norm.at<uchar>(j,i) > 120)
+            {
+                circle(img, Point(i,j), 5, white, 2);
+            }
+        }
     }
+    
     // vector img show 코드
     int i = 1;
     for (auto img : images)
@@ -38,4 +43,4 @@ int main()
     waitKey();
     destroyAllWindows();
     return 0;
-} 
+}
