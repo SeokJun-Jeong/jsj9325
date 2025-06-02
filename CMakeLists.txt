@@ -21,6 +21,7 @@ project(MainProject)
 # add_subdirectory(openCV/part1)
 # add_subdirectory(openCV/part2)
 # add_subdirectory(openCV/part3)
-add_subdirectory(openCV/part4)
+# add_subdirectory(openCV/part4)
+add_subdirectory(openCV/part5)
 
 
