@@ -499,15 +499,22 @@ Y2llbnSUiIwDTVNFlIiMBFJNU0WUiIwDTUFFlIiMBE1BUEWUiIwCUjKUiIwGQ1ZSTVNFlImMD0Ns
 dXN0ZXJpbmdTY29yZZSIjApTaWxob3VldHRllIiMF0FkanVzdGVkTXV0dWFsSW5mb1Njb3JllIh1
 c4wLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0
 dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojBdzaG93X3Byb2JhYmlsaXR5X2Vy
-cm9yc5SIjA9zaG93X3JlZ19lcnJvcnOUSwGMC3Nob3duX3Byb2JzlEsAjAx0YXJnZXRfY2xhc3OU
-jBYoQXZlcmFnZSBvdmVyIGNsYXNzZXMplGgGfZRoIEsCdYwHY2xhc3Nlc5QpdWJoJSmBlH2UKGgo
-fZQoaCqIaCtLAWgsSwFoLWguaAZ9lGggSwJ1aDCMBUNvdmlklIwGTm9ybWFslIwPVmlyYWwgUG5l
-dW1vbmlhlIeUdWJldS4=
+cm9yc5SIjA9zaG93X3JlZ19lcnJvcnOUSwGMC3Nob3duX3Byb2JzlEsBjAx0YXJnZXRfY2xhc3OU
+jBYoQXZlcmFnZSBvdmVyIGNsYXNzZXMplGgGfZRoIEsCdYwHY2xhc3Nlc5SMBUNvdmlklIwGTm9y
+bWFslIwPVmlyYWwgUG5ldW1vbmlhlIeUdWJoJSmBlH2UKGgofZQoaCqIaCtLAWgsSwBoLWguaAZ9
+lGggSwJ1aDApdWJldS4=
 </properties>
-		<properties node_id="10" format="literal">{'controlAreaVisible': True, 'recent_paths': [], 'savedWidgetGeometry': None, '__version__': 1}</properties>
+		<properties node_id="10" format="literal">{'controlAreaVisible': True, 'recent_paths': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02\xc1\x00\x00\x01\x7f\x00\x00\x04\xb8\x00\x00\x01\xfa\x00\x00\x02\xc4\x00\x00\x01\x9d\x00\x00\x04\xb5\x00\x00\x01\xf7\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80\x00\x00\x02\xc4\x00\x00\x01\x9d\x00\x00\x04\xb5\x00\x00\x01\xf7', '__version__': 1}</properties>
 		<properties node_id="11" format="literal">{'auto_save': False, 'controlAreaVisible': True, 'filter': 'Pickled model (*.pkcls)', 'savedWidgetGeometry': None, 'stored_name': '', 'stored_path': '', '__version__': 1}</properties>
 		<properties node_id="12" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': None, 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
-		<properties node_id="13" format="literal">{'controlAreaVisible': True, 'recent_paths': [], 'savedWidgetGeometry': None, '__version__': 1}</properties>
+		<properties node_id="13" format="pickle">gASVeQEAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZSMHm9y
+YW5nZXdpZGdldC51dGlscy5maWxlZGlhbG9nc5SMClJlY2VudFBhdGiUk5QpgZR9lCiMB2Fic3Bh
+dGiUjDwvaG9tZS9zZW9ranVuL2t1YmlnMjAyNS9vcmFuZ2UzL2FyY2hpdmUvQ292aWQxOS1kYXRh
+c2V0L3Rlc3SUjAZwcmVmaXiUjAdiYXNlZGlylIwHcmVscGF0aJSMHGFyY2hpdmUvQ292aWQxOS1k
+YXRhc2V0L3Rlc3SUjAV0aXRsZZSMAJSMBXNoZWV0lGgQjAtmaWxlX2Zvcm1hdJROdWJhjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAMFAAABaAAABHQAAAIRAAADCAAAAYYAAARxAAAC
+DgAAAAAAAAAAB4AAAAMIAAABhgAABHEAAAIOlIwLX192ZXJzaW9uX1+USwF1Lg==
+</properties>
 		<properties node_id="14" format="literal">{'_auto_apply': True, 'cb_embedder_current_id': 0, 'cb_image_attr_current_id': 0, 'controlAreaVisible': True, 'savedWidgetGeometry': None, '__version__': 1}</properties>
 	</node_properties>
 	<session_state>
