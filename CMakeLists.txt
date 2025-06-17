@@ -22,6 +22,7 @@ project(MainProject)
 # add_subdirectory(openCV/part2)
 # add_subdirectory(openCV/part3)
 # add_subdirectory(openCV/part4)
-add_subdirectory(openCV/part5)
-
+# add_subdirectory(openCV/part5)
+# add_subdirectory(opencv_test)
+add_subdirectory(ml_dt_python/dl_module)
 
